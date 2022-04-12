@@ -1,1 +1,29 @@
 ﻿<h1>This is Home Page</h1>
+
+<h2>
+    @ViewData["message"];
+</h2>
+
+@if(ViewData["ColorList"]!=null)
+{
+    
+<ul>
+    @foreach (var item in (IEnumerable<string>)ViewData["ColorList"])
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
+    
+}
+
+<ol>
+    @foreach (var item in  ViewBag.Colors)
+    {
+        <li>
+            @item
+        </li>
+    }
+</ol>
+    

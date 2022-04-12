@@ -6,6 +6,10 @@ namespace MVC_WebApplication.Controllers
     {
         public IActionResult FirstPage()
         {
+            ViewData["Message"] = "this is my first mvc application";
+            List<string> colors = new List<string>() { "red","green","white","orange"};
+            ViewData["ColorList"] = colors;
+            ViewBag.Colors = colors;
             return View();
         }
         public IActionResult AboutUs()
