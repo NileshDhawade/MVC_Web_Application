@@ -1,0 +1,29 @@
+﻿<h1>
+    this is my product list
+</h1>
+<table>
+    
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>price</th>
+    </tr>
+    
+    <tb>
+        @foreach (MVC_WebApplication.Models.Product item in ViewBag.prod)
+        {
+            <tr>
+               <td>
+                  @item.id
+               </td>
+               <td>
+                  @item.name
+               </td>
+               <td>
+                  @item.price
+               </td>
+            </tr>
+            
+        }
+    </tb>
+</table>
