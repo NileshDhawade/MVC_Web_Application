@@ -22,14 +22,15 @@ namespace MVC_WebApplication.Controllers
         }
         [HttpPost]
 
-        public ActionResult PersonalDetails(FormCollection fc, ICollection<string> hobbies)
+        public ActionResult PersonalDetails(IFormCollection fc, ICollection<string> hobbies)
         {
             ViewBag.firstname = fc["firstname"];
             ViewBag.lastname = fc["lastname"];
             ViewBag.phone = fc["phone"];
             ViewBag.gender = fc["Gender"];
             ViewBag.hobbies = hobbies;
-            return View();
+            ViewBag.options = fc["Options"];
+            return View("Details");
 
 
         }
