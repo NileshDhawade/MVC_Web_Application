@@ -1,13 +1,17 @@
 ﻿<h1>
     this is my product list
 </h1>
-<table>
-    
-    <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>price</th>
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">price</th>
     </tr>
+
+    </thead>
+    
+    
     
     <tb>
         @foreach (MVC_WebApplication.Models.Product item in ViewBag.prod)

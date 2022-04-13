@@ -1,0 +1,30 @@
+﻿<h1>this is employee list page</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">empId</th>
+      <th scope="col">empName</th>
+      <th scope="col">empSalary</th>
+    </tr>
+  </thead>
+  <tbody>
+   @foreach (MVC_WebApplication.Models.Employee item in ViewBag.employee)
+		{
+			
+			<tr>
+				<td>
+					@item.empId
+				</td>
+				<td>
+					@item.empName
+				</td>
+				<td>
+					@item.empSalary
+				</td>
+			</tr>
+
+		}
+    
+  </tbody>
+</table>
